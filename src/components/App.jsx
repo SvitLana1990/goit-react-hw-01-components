@@ -6,11 +6,13 @@ import friends from './FriendList/friends.json';
 import { FriendList } from './FriendList/FriendList.jsx';
 import items from './TransactionHistory/transactions.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import { Container } from './App.styled';
+import { GlobalStyle } from './GlobalStyle';
 
 const title = true;
 export const App = () => {
   return (
-    <div>
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -25,6 +27,7 @@ export const App = () => {
       )}
       <FriendList friends={friends} />
       <TransactionHistory items={items} />
-    </div>
+      <GlobalStyle />
+    </Container>
   );
 };

@@ -1,16 +1,17 @@
+import { HeaderTitle, Table, TableHead } from './TransactionHisory.styled';
 import { TransactionHistoryItem } from './TransactionHistoryItem';
 import items from './transactions.json';
 
 export const TransactionHistory = () => {
   return (
-    <table className="transaction-history">
-      <thead>
+    <Table className="transaction-history">
+      <TableHead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <HeaderTitle>Type</HeaderTitle>
+          <HeaderTitle>Amount</HeaderTitle>
+          <HeaderTitle>Currency</HeaderTitle>
         </tr>
-      </thead>
+      </TableHead>
 
       <tbody>
         {items.map(item => (
@@ -22,6 +23,6 @@ export const TransactionHistory = () => {
           />
         ))}
       </tbody>
-    </table>
+    </Table>
   );
 };
