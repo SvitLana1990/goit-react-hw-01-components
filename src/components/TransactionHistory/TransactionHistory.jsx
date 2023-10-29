@@ -4,7 +4,7 @@ import items from './transactions.json';
 
 export const TransactionHistory = () => {
   return (
-    <Table className="transaction-history">
+    <Table>
       <TableHead>
         <tr>
           <HeaderTitle>Type</HeaderTitle>
